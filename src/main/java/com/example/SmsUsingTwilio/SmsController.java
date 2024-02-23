@@ -10,7 +10,9 @@ public class SmsController {
 
     @PostMapping("/sendSms")
     public String sendSms(@RequestBody SmsDetails smsDetails) {
+
         smsService.sendSms(smsDetails.getTo(), smsDetails.getMessage());
         return "SMS Sent Successfully";
+
     }
 }
